@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import CountdownTimer from "./CountdownTimer";
+import questionImage from "./assets/question_two_1.png";
+import audioFile from "./assets/TOEFL speaking mock 2 2021 8.wav";
 
 import styles from "./App.module.css";
 
@@ -83,26 +85,24 @@ function App() {
 						<p>Sincerely,</p>
 						<p>Rebecca Smith</p>
 					</article>
-					<div className={styles.timer_container}>
-						<CountdownTimer time={45000} />
-					</div>
+					<article className={styles.announcement}>
+						<div className={styles.timer_container}>
+							<CountdownTimer time={45000} />
+						</div>
+					</article>
 				</>
 			)}
 			{mode === modeEnum.LISTEN && (
 				<article className={styles.announcement}>
-					<img src="/src/assets/question_two_1.png" className={styles.image} />
+					<img src={questionImage} className={styles.image} />
 					<audio controls>
-						<source
-							src="/src/assets/TOEFL speaking mock 2 2021 8.wav"
-							type="audio/wav"
-						/>
+						<source src={audioFile} type="audio/wav" />
 					</audio>
 				</article>
 			)}
 			{(mode === modeEnum.PREPARE || mode === modeEnum.SPEAK) && (
 				<>
 					<article className={styles.announcement}>
-						<h2>Recording</h2>
 						<p>
 							The man expresses his opinion about the proposal described in the
 							letter. Briefly summarise the proposal. Then state his opinion
@@ -110,9 +110,17 @@ function App() {
 							that opinion.
 						</p>
 					</article>
-					<div className={styles.timer_container}>
-						<CountdownTimer time={time} />
-					</div>
+					<section className={styles.announcement}>
+						{mode === modeEnum.PREPARE && (
+							<span className={styles.instruction}>Prepare your response</span>
+						)}
+						{mode === modeEnum.SPEAK && (
+							<span className={styles.instruction}>Give your response</span>
+						)}
+						<div className={styles.timer_container}>
+							<CountdownTimer time={time} />
+						</div>
+					</section>
 				</>
 			)}
 		</>
