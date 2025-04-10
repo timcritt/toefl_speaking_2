@@ -102,3 +102,9 @@ hr {
 	max-width: 1080px;
 	width: 100%;
 }
+.test_list {
+	cursor: pointer;
+}
+.active_test_link {
+	color: red;
+}

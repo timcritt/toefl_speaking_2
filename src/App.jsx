@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import CountdownTimer from "./CountdownTimer";
 import questionImage from "./assets/question_two_1.png";
-import audioFile from "./assets/TOEFL speaking mock 2 2021 8.wav";
+
+//import tests from "./assets/speaking_part_2.json";
 
 import styles from "./App.module.css";
 
@@ -14,12 +15,52 @@ function App() {
 		SPEAK: "SPEAK",
 	});
 
+	const [tests, setTests] = useState([]);
+	const [currentTest, setCurrentTest] = useState();
+
 	const [mode, setMode] = useState(modeEnum.READ);
 	const [time, setTime] = useState(30000);
+
+	const loadTest = (test) => {
+		setCurrentTest(test);
+		console.log(test);
+	};
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const res = await fetch("./speaking_part_2.json");
+				if (!res.ok) throw new Error("Fetch failed");
+				const json = await res.json();
+				setTests(json);
+				console.log(json);
+			} catch (err) {
+				console.error("Error:", err);
+			}
+		};
+
+		fetchData();
+	}, []);
 
 	return (
 		<>
 			<h1>Question 2</h1>
+			<nav>
+				<ul className={styles.test_list}>
+					{Object.entries(tests).map(([key, value]) => (
+						<li
+							onClick={() => loadTest(value)}
+							key={key}
+							className={`${
+								value.announcement.title === currentTest?.announcement.title
+									? styles.active_test_link
+									: ""
+							}`}
+						>
+							{value.announcement.title}
+						</li>
+					))}
+				</ul>
+			</nav>
 			<div className={styles.toggle_group}>
 				<input
 					type="radio"
@@ -66,25 +107,19 @@ function App() {
 				<label htmlFor="speak">Speak</label>
 			</div>
 
-			{mode === modeEnum.READ && (
+			{mode === modeEnum.READ && currentTest && (
 				<>
 					<article className={styles.announcement}>
-						<h2>Students Need Access to Movie Collection</h2>
-						<p>
-							The university library has a large collection of films on video
-							and DVD that students can borrow. However, students aren't allowed
-							to go into the area where these items are kept. Instead, students
-							need to request a movie title, and then library staff get it for
-							them. I think students should be allowed to go into the area where
-							the videos and DVDS are kept. First, it will be easier for
-							students to choose a good movie because then they can easily see
-							what is available. Also, if students can get movies themselves,
-							the university won't have to pay extra library staff to help
-							students.
-						</p>
-						<p>Sincerely,</p>
-						<p>Rebecca Smith</p>
+						<h2>{currentTest.announcement.title}</h2>
+						<p>{currentTest.announcement.body}</p>
+						{currentTest.announcement.author && (
+							<>
+								<p>Sincerely,</p>
+								<p>{currentTest.announcement.author}</p>
+							</>
+						)}
 					</article>
+
 					<article className={styles.announcement}>
 						<div className={styles.timer_container}>
 							<CountdownTimer time={45000} />
@@ -92,37 +127,35 @@ function App() {
 					</article>
 				</>
 			)}
-			{mode === modeEnum.LISTEN && (
+			{mode === modeEnum.LISTEN && currentTest && (
 				<article className={styles.announcement}>
 					<img src={questionImage} className={styles.image} />
 					<audio controls>
-						<source src={audioFile} type="audio/wav" />
+						<source src={currentTest.audio} type="audio/wav" />
 					</audio>
 				</article>
 			)}
-			{(mode === modeEnum.PREPARE || mode === modeEnum.SPEAK) && (
-				<>
-					<article className={styles.announcement}>
-						<p>
-							The man expresses his opinion about the proposal described in the
-							letter. Briefly summarise the proposal. Then state his opinion
-							about the proposal and explain the reasons he gives for holding
-							that opinion.
-						</p>
-					</article>
-					<section className={styles.announcement}>
-						{mode === modeEnum.PREPARE && (
-							<span className={styles.instruction}>Prepare your response</span>
-						)}
-						{mode === modeEnum.SPEAK && (
-							<span className={styles.instruction}>Give your response</span>
-						)}
-						<div className={styles.timer_container}>
-							<CountdownTimer time={time} />
-						</div>
-					</section>
-				</>
-			)}
+			{(mode === modeEnum.PREPARE || mode === modeEnum.SPEAK) &&
+				currentTest && (
+					<>
+						<article className={styles.announcement}>
+							<p>{currentTest.question}</p>
+						</article>
+						<section className={styles.announcement}>
+							{mode === modeEnum.PREPARE && (
+								<span className={styles.instruction}>
+									Prepare your response
+								</span>
+							)}
+							{mode === modeEnum.SPEAK && (
+								<span className={styles.instruction}>Give your response</span>
+							)}
+							<div className={styles.timer_container}>
+								<CountdownTimer time={time} />
+							</div>
+						</section>
+					</>
+				)}
 		</>
 	);
 }
