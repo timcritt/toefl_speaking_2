@@ -6,7 +6,7 @@
 			"body": "Beginning next month, Dining Services will no longer serve hot breakfast foods at university dining halls. Instead, students will be offered a wide assortment of cold breakfast items in the morning. These cold breakfast foods, such as breads, fruit, and yogurt, are healthier than many of the hot breakfast items that we will stop serving, so health-conscious students should welcome this change. Students will benefit in another way as well, because limiting the breakfast selection to cold food items will save money and allow us to keep our meal plans affordable.",
 			"author": ""
 		},
-		"audio": "/public/audio/hot_breakfast.mp3",
+		"audio": "/audio/hot_breakfast.mp3",
 		"question": "The woman expresses her opinion of the change that has been announced. State her opinion and explain her reasons for holding that opinion.",
 		"key": {
 			"anouncement_key": ["1", "2", "3"],
@@ -20,7 +20,7 @@
 			"body": "The university library has a large collection of films on video and DVD that students can borrow. However, students aren't allowed to go into the area where these items are kept. Instead, students need to request a movie title, and then library staff get it for them. I think students should be allowed to go into the area where the videos and DVDS are kept. First, it will be easier for students to choose a good movie because then they can easily see what is available. Also, if students can get movies themselves, the university won't have to pay extra library staff to help students..",
 			"author": "Rebecca Smith"
 		},
-		"audio": "/public/audio/access_to_movies.wav",
+		"audio": "/audio/access_to_movies.wav",
 		"question": "The man expresses his opinion about the proposal described in the letter. Briefly summarize the proposal. Then state his opinion about the proposal and explain the reasons he gives for holding that opinion.",
 		"key": {
 			"anouncement_key": ["1", "2", "3"],
@@ -34,7 +34,7 @@
 			"body": "The business studies department at State University will now require all students enrolled in its program to complete one semester of work experience in a local corporation or small business. It is felt that students will benefit from this work experience by developing leadership and organizational skills that would not normally be learned in a classroom or campus setting. Furthermore, the relationships that students establish with the company that they work for may help them to secure permanent employment with that company once they have completed the program and graduated.",
 			"author": ""
 		},
-		"audio": "/public/audio/required_work_experience.mp3",
+		"audio": "/audio/required_work_experience.mp3",
 		"question": "The woman expresses her opinion of the university’s new policy. State her opinion and explain the reasons she gives for holding that opinion.",
 		"key": {
 			"anouncement_key": ["1", "2", "3"],
@@ -48,7 +48,7 @@
 			"body": "The university is currently considering possible locations on campus for displaying paintings and other artwork by students. I think the lobby at the entrance to the student center would be a great location. Since many students pass through the student center every day, artwork displayed in the lobby would be viewed by hundreds of people. Also, because the whole front of the building is made of glass windows, the lobby is filled with natural light. This makes it perfect for displaying artwork, which should have plenty of light to be seen and appreciated.",
 			"author": "Paul Sands"
 		},
-		"audio": "/public/audio/student_art_display.mp3",
+		"audio": "/audio/student_art_display.mp3",
 		"question": "Briefly summarize the proposal in the student’s letter. Then state the woman’s opinion about the proposal and explain the reasons she gives for holding that opinion..",
 		"key": {
 			"anouncement_key": ["1", "2", "3"],
@@ -62,7 +62,7 @@
 			"body": "Over the last ten years, the number of Central College students living on campus in dormitories has decreased by twenty percent. In an effort to counteract the trend, the college has announced a plan to renovate its on-campus housing. The renovations will take two years, and they will include improvements to the bathrooms, lighting, and heating in the dormitories. “A lot of people are moving off campus because the dorms aren’t in great shape,” explained the college president. “By renovating the dorms, we can make them more appealing than off-campus housing, and more students will choose to remain on campus.",
 			"author": ""
 		},
-		"audio": "/public/audio/housing_renovations_planned.mp3",
+		"audio": "/audio/housing_renovations_planned.mp3",
 		"question": "The woman expresses her opinion about the college’s plan. State her opinion and explain the reasons she gives for holding that opinion.",
 		"key": {
 			"anouncement_key": ["1", "2", "3"],
@@ -76,7 +76,7 @@
 			"body": "The university is considering making major changes to the college radio station. Changes would include an expansion of the station’s broadcasting range, which would allow the radio’s programming to reach nearby towns. One goal of the plan is to attract more students to apply to its communications program. Another goal is to provide the university with an extra source of revenue. University officials expect the enhanced radio station to significantly increase the number of listeners, which will in turn encourage businesses to place commercials on the radio.",
 			"author": ""
 		},
-		"audio": "/public/audio/college_radio_changes.mp3",
+		"audio": "/audio/college_radio_changes.mp3",
 		"question": "The woman supports the proposal described in the article. Explain why she thinks it will achieve the university’s goals.",
 		"key": {
 			"anouncement_key": ["1", "2", "3"],
@@ -90,7 +90,7 @@
 			"body": "A university official announced plans to spend $2 million to build a new athletic stadium, commenting that a new stadium would help the university achieve its goal of attracting more top students. The official also said that, additionally, building a new stadium would allow the university to strengthen its relationship with the town since a new and larger stadium would have the space to seat not only students, parents, and alumni, but members of the local community as well.",
 			"author": ""
 		},
-		"audio": "/public/audio/new_stadium.mp3",
+		"audio": "/audio/new_stadium.mp3",
 		"question": "The woman expresses her opinion about the university’s plan. State her opinion and explain the reasons she gives for holding that opinion.",
 		"key": {
 			"anouncement_key": ["1", "2", "3"],
