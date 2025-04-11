@@ -1,8 +1,8 @@
 import styles from "./SideNavBar.module.css";
 
-const SideBarNav = ({ tests, loadTest, currentTest }) => {
+const SideNavBar = ({ tests, loadTest, currentTest }) => {
 	return (
-		<nav>
+		<nav className={styles.expanded}>
 			<ul className={styles.test_list}>
 				{Object.entries(tests).map(([key, value]) => (
 					<li
@@ -22,4 +22,4 @@ const SideBarNav = ({ tests, loadTest, currentTest }) => {
 	);
 };
 
-export default SideBarNav;
+export default SideNavBar;

@@ -3,11 +3,11 @@ import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import Read from "../Read/Read";
 import Listen from "../Listen/Listen";
 import PrepareSpeak from "../PrepareSpeak/PrepareSpeak";
-import image from "../../assets/question_two_1.png";
+import image from "../../assets/question_three_male.png";
 
-import styles from "./SpeakingPart2.module.css";
+import styles from "./SpeakingPart3.module.css";
 
-const SpeakingPart2Presentation = ({
+const SpeakingPart3Presentation = ({
 	tests,
 	loadTest,
 	currentTest,
@@ -19,7 +19,7 @@ const SpeakingPart2Presentation = ({
 }) => {
 	return (
 		<>
-			<h1>Question 2</h1>
+			<h1>Question 3</h1>
 			<SideNavBar tests={tests} loadTest={loadTest} currentTest={currentTest} />
 			<ToggleSwitch
 				mode={mode}
@@ -56,4 +56,4 @@ const SpeakingPart2Presentation = ({
 	);
 };
 
-export default SpeakingPart2Presentation;
+export default SpeakingPart3Presentation;

@@ -1,8 +1,8 @@
-import SpeakingPart2Presentation from "./SpeakingPart2Presentation";
+import SpeakingPart3Presentation from "./SpeakingPart3Presentation";
 import usePart from "../../hooks/usePart";
 
-const SpeakingPart2Container = () => {
-	//The possible modes for the Speaking Part 2 component
+const SpeakingPart3Container = () => {
+	//The possible modes for the Speaking Part 3 component
 	const modeEnum = Object.freeze({
 		READ: "READ",
 		LISTEN: "LISTEN",
@@ -10,7 +10,7 @@ const SpeakingPart2Container = () => {
 		SPEAK: "SPEAK",
 	});
 
-	//Fetch tests, handle test selection, handle switching between parts
+	//Speaking part 3 mode is set to READ by default
 	const {
 		mode,
 		setMode,
@@ -20,10 +20,10 @@ const SpeakingPart2Container = () => {
 		loadTest,
 		time,
 		setTime,
-	} = usePart(modeEnum, modeEnum.READ, "./speaking_part_2.json");
+	} = usePart(modeEnum, modeEnum.READ, "./speaking_part_3.json");
 
 	return (
-		<SpeakingPart2Presentation
+		<SpeakingPart3Presentation
 			mode={mode}
 			setMode={setMode}
 			modeEnum={modeEnum}
@@ -37,4 +37,4 @@ const SpeakingPart2Container = () => {
 	);
 };
 
-export default SpeakingPart2Container;
+export default SpeakingPart3Container;

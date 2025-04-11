@@ -1,0 +1,17 @@
+header {
+	background-color: lightgray;
+	padding: 5px;
+	text-align: center;
+}
+
+header nav ul {
+	display: flex;
+	flex-direction: row;
+}
+header nav ul li {
+	width: fit-content;
+	white-space: nowrap;
+	list-style: none;
+	margin: 25px;
+	padding: 5px;
+}

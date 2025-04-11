@@ -1,0 +1,17 @@
+nav {
+	padding: 10px;
+	margin: 10px;
+	position: absolute;
+	width: 0px;
+}
+.test_list {
+	cursor: pointer;
+	list-style: none;
+}
+.active_test_link {
+	color: red;
+}
+
+.expanded {
+	width: fit-content;
+}
