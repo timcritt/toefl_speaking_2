@@ -1,0 +1,22 @@
+.announcement {
+	background-color: #f9f9f9;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px auto;
+
+	max-width: 1080px;
+}
+.timer_container {
+	max-width: 1080px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px auto;
+}
+
+.image {
+	width: 50%;
+	max-height: auto;
+	display: block;
+	margin: 20px auto;
+}
