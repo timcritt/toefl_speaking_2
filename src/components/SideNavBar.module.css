@@ -1,0 +1,6 @@
+.test_list {
+	cursor: pointer;
+}
+.active_test_link {
+	color: red;
+}
