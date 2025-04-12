@@ -5,7 +5,7 @@ import Listen from "../Listen/Listen";
 import PrepareSpeak from "../PrepareSpeak/PrepareSpeak";
 import image from "../../assets/question_three_male.png";
 
-const SpeakingPart3Presentation = ({
+const SpeakingPart4Presentation = ({
 	tests,
 	loadTest,
 	currentTest,
@@ -17,7 +17,7 @@ const SpeakingPart3Presentation = ({
 }) => {
 	return (
 		<>
-			<h1>Question 3</h1>
+			<h1>Question 4</h1>
 			<SideNavBar tests={tests} loadTest={loadTest} currentTest={currentTest} />
 			<ToggleSwitch
 				mode={mode}
@@ -26,13 +26,6 @@ const SpeakingPart3Presentation = ({
 				setTime={setTime}
 			/>
 
-			{mode === modeEnum.READ && currentTest && (
-				<Read
-					title={currentTest.announcement.title}
-					body={currentTest.announcement.body}
-					author={currentTest.announcement.author}
-				/>
-			)}
 			{mode === modeEnum.LISTEN && currentTest && (
 				//Key needed here to force re-render of audio element when new test selected
 				<Listen
@@ -54,4 +47,4 @@ const SpeakingPart3Presentation = ({
 	);
 };
 
-export default SpeakingPart3Presentation;
+export default SpeakingPart4Presentation;

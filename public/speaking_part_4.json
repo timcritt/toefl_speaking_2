@@ -1,0 +1,28 @@
+{
+	"the_establishing_shot_part_4": {
+		"announcement": {
+			"title": "The Establishing Shot",
+			"body": "Film directors use different types of camera shots for specific purposes. An establishing shot is an image shown briefly at the beginning of a scene, usually taken from far away, that is used to provide context for the rest of the scene. One purpose of the establishing shot is to communicate background information to the viewer, such as the setting—where and when the rest of the scene will occur. It also establishes the mood or feeling of the scene. Due to the context that the establishing shot provides, the characters and events that are shown next are better understood by the viewer.",
+			"author": ""
+		},
+		"audio": "/audio/part_3/the_establishing_shot.mp3",
+		"question": "Using the professor’s example, explain what an establishing shot is and how it is used.",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"outsider_art": {
+		"announcement": {
+			"title": "Outsider Art",
+			"body": "Outsider Art is a term used to describe art that is made by people who choose to live and work outside society. The artists who produce this kind of art—Outsider Artists—work in isolation from other artists and have little or no formal artistic training. Because they do not learn conventional artistic techniques from teachers or other artists, Outsider Artists must invent their own ways of doing things. As a result of the unconventional methods that Outsider Artists often use, their work can look strange and not at all like traditional art to the observer.",
+			"author": ""
+		},
+		"audio": "/audio/part_3/outsider_art.mp3",
+		"question": "Explain why Henry Darger is considered an Outsider Artist.",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	}
+}

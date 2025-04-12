@@ -1,51 +1,38 @@
+import React from "react";
 import styles from "./ToggleSwitch.module.css";
 
 const ToggleSwitch = ({ mode, modeEnum, setMode, setTime }) => {
 	return (
 		<div className={styles.toggle_group}>
-			<input
-				type="radio"
-				name="mode"
-				id="read"
-				value="read"
-				checked={mode === modeEnum.READ}
-				onChange={() => setMode(modeEnum.READ)}
-			/>
-			<label htmlFor="read">Read</label>
+			{Object.entries(modeEnum).map(([key, value]) => {
+				const id = key.toLowerCase();
 
-			<input
-				type="radio"
-				name="mode"
-				id="listen"
-				value="listen"
-				checked={mode === modeEnum.LISTEN}
-				onChange={() => setMode(modeEnum.LISTEN)}
-			/>
-			<label htmlFor="listen">Listen</label>
-			<input
-				type="radio"
-				name="mode"
-				id="prepare"
-				value="preare"
-				checked={mode === modeEnum.PREPARE}
-				onChange={() => {
-					setTime(30000);
-					setMode(modeEnum.PREPARE);
-				}}
-			/>
-			<label htmlFor="prepare">Prepare</label>
-			<input
-				type="radio"
-				name="mode"
-				id="speak"
-				value="speak"
-				checked={mode === modeEnum.SPEAK}
-				onChange={() => {
-					setMode(modeEnum.SPEAK);
-					setTime(60000);
-				}}
-			/>
-			<label htmlFor="speak">Speak</label>
+				const handleChange = () => {
+					// Set time conditionally for specific modes
+					if (value === modeEnum.PREPARE) {
+						setTime(30000);
+					} else if (value === modeEnum.SPEAK) {
+						setTime(60000);
+					}
+					setMode(value);
+				};
+
+				return (
+					<React.Fragment key={value}>
+						<input
+							type="radio"
+							name="mode"
+							id={id}
+							value={id}
+							checked={mode === value}
+							onChange={handleChange}
+						/>
+						<label htmlFor={id}>
+							{key.charAt(0) + key.slice(1).toLowerCase()}
+						</label>
+					</React.Fragment>
+				);
+			})}
 		</div>
 	);
 };
