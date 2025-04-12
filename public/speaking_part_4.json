@@ -1,0 +1,122 @@
+{
+	"how_plants_defend_themselves": {
+		"announcement": {
+			"title": "How Plants Defend Themselves"
+		},
+		"audio": "/audio/part_4/how_plants_defend_themselves.mp3",
+		"question": "Using points from the lecture, explain how the passion plant and the potato plant defend themselves from insects.",
+		"voice_gender": "FEMALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"babies_have_empathy": {
+		"announcement": {
+			"title": "Babies Have Empathy"
+		},
+		"audio": "/audio/part_4/babies_have_empathy.mp3",
+		"question": "Using the points from the lecture, explain why researchers think that babies may feel empathy.",
+		"voice_gender": "FEMALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"principles_of_interior_design": {
+		"announcement": {
+			"title": "Principles of Interior Design"
+		},
+		"audio": "/audio/part_4/principles_of_interior_design.mp3",
+		"question": "Using the points and examples from the lecture, explain what unity and contrast are, and how they make interior design more effective.",
+		"voice_gender": "FEMALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"product_deman": {
+		"announcement": {
+			"title": "Product Demand"
+		},
+		"audio": "/audio/part_4/product_demand.mp3",
+		"question": "Using the points and examples from the talk, explain how substitute goods and complement goods influence demand for a particular product.",
+		"voice_gender": "FEMALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"sealife_camouflage": {
+		"announcement": {
+			"title": "Sealife Camouflage"
+		},
+		"audio": "/audio/part_4/sealife_camouflage.mp3",
+		"question": "Using the examples of the leafy sea dragon and the cuttlefish, describe two kinds of camouflage and the benefits they provide.",
+		"voice_gender": "FEMALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"visual_elements_of_art": {
+		"announcement": {
+			"title": "Visual Elements of Art"
+		},
+		"audio": "/audio/part_4/visual_elements_of_art.mp3",
+		"question": "Using points and examples from the lecture, explain the importance of visual elements in painting.",
+		"voice_gender": "FEMALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"motivation": {
+		"announcement": {
+			"title": "Motivation"
+		},
+		"audio": "/audio/part_4/motivation.mp3",
+		"question": "Using points and examples from the talk, explain the two types of motivation.",
+		"voice_gender": "FEMALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"keeping_students_attention": {
+		"announcement": {
+			"title": "Keeping Students' Attention"
+		},
+		"audio": "/audio/part_4/keeping_students_attention.mp3",
+		"question": "Using points and examples from the talk, explain the difference between active and passive attention.",
+		"voice_gender": "FEMALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"ethics_in_advertising": {
+		"announcement": {
+			"title": "Ethics in Advertising"
+		},
+		"audio": "/audio/part_4/ethics_in_advertising.mp3",
+		"question": "Using the example of the vacuum cleaner, explain when it is legally acceptable to use exaggeration in advertising and when it is not.",
+		"voice_gender": "FEMALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"creating_impact_in_writing": {
+		"announcement": {
+			"title": "Creating Impact in Writing"
+		},
+		"audio": "/audio/part_4/creating_impact_in_writing.mp3",
+		"question": "Using the examples mentioned by the professor, describe two ways that writers create emphasis when writing dialogue.",
+		"voice_gender": "FEMALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	}
+}

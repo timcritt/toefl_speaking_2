@@ -96,5 +96,75 @@
 			"anouncement_key": ["1", "2", "3"],
 			"audio_key": ["1", "2", "3"]
 		}
+	},
+	"evening_computer_classes_may_be_added": {
+		"announcement": {
+			"type": "article",
+			"title": "Evening Computer Classes May Be Added",
+			"body": "The computer department is considering offering evening classes in the fall. The proposal to add the classes is a response to student complaints that daytime computer classes have become increasingly overcrowded and there are no longer enough computers available. The department has decided that despite some added expense, the most cost-effective way of addressing this problem is by adding computer classes in the evening. It is hoped that this change will decrease the number of students enrolled in day classes and thus guarantee individual access to computers for all students in computer classes.",
+			"author": ""
+		},
+		"audio": "/audio/evening_computer_classes_may_be_added.mp3",
+		"question": "The man expresses his opinion about the proposal described in the article. Briefly summarize the proposal. Then state his opinion about the proposal and explain the reasons he gives for holding that opinion.",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"campus_dining_club_announced": {
+		"announcement": {
+			"type": "article",
+			"title": "Campus Dining Club Announced",
+			"body": "Starting this year, the university dining hall will be transformed into The Campus Dining Club for one week at the end of each semester. During the last week of each semester, the dining hall will feature special meals prepared by the university’s culinary arts students. The school feels that this will give students who are studying cooking and food preparation valuable experience that will help them later, when they pursue careers. The university has announced that it will charge a small additional fee for these dinners in order to pay for the special gourmet food ingredients that will be required.",
+			"author": ""
+		},
+		"audio": "/audio/campus_dining_club_announced.mp3",
+		"question": "The man expresses his opinion about the plan described in the article. Briefly summarize the plan. Then state his opinion about the plan and explain the reasons he gives for holding that opinion..",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"history_classes_should_be_shorter": {
+		"announcement": {
+			"type": "article",
+			"title": "History Classes Should Be Shorter",
+			"body": "Currently, all of the seminar classes in the history department are three hours long. I would like to propose that history seminars be shortened to two hours. I make this proposal for two reasons. First, most students just cannot concentrate for three hours straight. I myself have taken these three-hour seminars and found them tiring and sometimes boring. Also, when a seminar lasts that long, people stop concentrating and stop learning, so the third hour of a three-hour seminar is a waste of everyone’s time. Two-hour seminars would be much more efficient.",
+			"author": "Tim Lawson"
+		},
+		"audio": "/audio/history_classes_should_be_shorter.mp3",
+		"question": "The woman expresses her opinion about the proposal described in the letter. Briefly summarize the proposal. Then state her opinion about the proposal and explain the reasons she gives for holding that opinion.",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"professor_fox_accepts_new_position": {
+		"announcement": {
+			"type": "article",
+			"title": "Professor Fox Accepts New Position",
+			"body": "We are happy to announce that Professor Fox will be filling the vacant Dean of Students position. Strong organizational skills are important for this position. Professor Fox has demonstrated such skills in her role as Head of the Philosophy Department, where she has coordinated department affairs for five years. Additionally, the Dean of Students must be someone who is able to work well with students, since responsibilities include counseling and advising students who are dealing with personal problems. As our head women’s soccer coach, Professor Fox has proven to be a supportive role model for team members, always offering assistance when they ask for personal guidance.",
+			"author": ""
+		},
+		"audio": "/audio/professor_fox_accepts_new_position.mp3",
+		"question": "The woman expresses her opinion about the change described in the article. Briefly summarize the change. Then state her opinion about the change and explain the reasons she gives for holding that opinion.",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"plans_for_campus_gym": {
+		"announcement": {
+			"type": "article",
+			"title": "Plans for Campus Gym",
+			"body": "The recreational services department will receive special funding from this year’s budget to increase the number of exercise machines in the campus gym. The increase is in response to numerous student complaints regarding the insufficient number of machines available. Recreational services agrees that, due to an increase in university enrollment, more students are using the gym. They, therefore, welcomed the proposal, adding that it would encourage even more students to exercise and would help to promote a healthier lifestyle among students.",
+			"author": ""
+		},
+		"audio": "/audio/plans_for_campus_gym.mp3",
+		"question": "The woman expresses her opinion about the plan described in the announcement. Briefly summarize the plan. Then state her opinion about the plan and explain the reasons she gives for holding that opinion.",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
 	}
 }

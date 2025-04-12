@@ -1,9 +1,3 @@
-nav {
-	padding: 10px;
-	margin: 10px;
-	position: absolute;
-	width: 0px;
-}
 .test_list {
 	cursor: pointer;
 	list-style: none;
@@ -14,4 +8,7 @@ nav {
 
 .expanded {
 	width: fit-content;
+	padding: 10px;
+	margin: 10px;
+	position: absolute;
 }
