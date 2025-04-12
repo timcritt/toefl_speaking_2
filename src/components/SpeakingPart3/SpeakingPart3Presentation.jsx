@@ -1,9 +1,9 @@
 import SideNavBar from "../SideNavBar/SideNavBar";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import Read from "../Read/Read";
-import Listen from "../Listen/Listen";
+import Part3ListenContainer from "../Listen/ListenLectureContainer";
 import PrepareSpeak from "../PrepareSpeak/PrepareSpeak";
-import image from "../../assets/question_three_male.png";
+import image from "../../assets/male_professor.png";
 
 const SpeakingPart3Presentation = ({
 	tests,
@@ -35,10 +35,11 @@ const SpeakingPart3Presentation = ({
 			)}
 			{mode === modeEnum.LISTEN && currentTest && (
 				//Key needed here to force re-render of audio element when new test selected
-				<Listen
+				<Part3ListenContainer
 					key={currentTest.audio}
 					audio={currentTest.audio}
 					image={image}
+					voiceGender={currentTest.voice_gender}
 				/>
 			)}
 			{(mode === modeEnum.PREPARE || mode === modeEnum.SPEAK) &&

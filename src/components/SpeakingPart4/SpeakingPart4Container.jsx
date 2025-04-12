@@ -1,5 +1,6 @@
 import SpeakingPart4Presentation from "./SpeakingPart4Presentation";
 import usePart from "../../hooks/usePart";
+import { useEffect } from "react";
 
 const SpeakingPart4Container = () => {
 	//The possible modes for the Speaking Part 3 component
@@ -19,7 +20,7 @@ const SpeakingPart4Container = () => {
 		loadTest,
 		time,
 		setTime,
-	} = usePart(modeEnum, modeEnum.READ, "./speaking_part_4.json");
+	} = usePart(modeEnum, modeEnum.LISTEN, "./speaking_part_4.json");
 
 	return (
 		<SpeakingPart4Presentation

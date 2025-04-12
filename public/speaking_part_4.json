@@ -7,6 +7,7 @@
 		},
 		"audio": "/audio/part_3/the_establishing_shot.mp3",
 		"question": "Using the professor’s example, explain what an establishing shot is and how it is used.",
+		"voice_gender": "MALE",
 		"key": {
 			"anouncement_key": ["1", "2", "3"],
 			"audio_key": ["1", "2", "3"]
@@ -20,6 +21,7 @@
 		},
 		"audio": "/audio/part_3/outsider_art.mp3",
 		"question": "Explain why Henry Darger is considered an Outsider Artist.",
+		"voice_gender": "MALE",
 		"key": {
 			"anouncement_key": ["1", "2", "3"],
 			"audio_key": ["1", "2", "3"]
