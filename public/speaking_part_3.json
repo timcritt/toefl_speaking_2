@@ -26,5 +26,117 @@
 			"anouncement_key": ["1", "2", "3"],
 			"audio_key": ["1", "2", "3"]
 		}
+	},
+	"subliminal_perception": {
+		"announcement": {
+			"title": "Subliminal Perception",
+			"body": "Humans are constantly perceiving visual and auditory stimuli. Sometimes our perception of these stimuli occurs consciously; we are aware of a stimulus and know that we are perceiving it. But our perception of a stimulus can also occur without our awareness: an image might appear and disappear before our eyes too quickly for us to notice that we saw it, or a sound might be too faint for us to realize that we heard it. This phenomenon—the perception of a stimulus just below the threshold of conscious awareness—is called subliminal perception. Experiments have shown that subliminally perceived stimuli can influence people’s thoughts and attitudes.",
+			"author": ""
+		},
+		"audio": "/audio/part_3/subliminal_perception.mp3",
+		"question": "Describe what subliminal perception is and explain how the experiment discussed by the professor illustrates this phenomenon.",
+		"voice_gender": "MALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"perceptual_constancy": {
+		"announcement": {
+			"title": "Perceptual Constancy",
+			"body": "How an object affects our senses depends in part on external conditions, and these condi­tions are always changing. An object viewed from one angle presents a different shape to our eye than when viewed from another angle; similarly, as the distance from which we view an object changes, the object will appear larger or smaller. In spite of this, even as conditions change and we see objects differently, we still recognize that they remain the same. This is what is known as perceptual constancy. If not for perceptual constancy, we might have difficulty recognizing familiar objects if we viewed them in a new and different context.",
+			"author": ""
+		},
+		"audio": "/audio/part_3/perceptual_constancy.mp3",
+		"question": "Explain what is meant by perceptual constancy, using the examples provided by the professor.",
+		"voice_gender": "MALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"entertainment_merchandising": {
+		"announcement": {
+			"title": "Entertainment Merchandising",
+			"body": "An effective, widely used marketing practice in the entertainment industry is entertainment merchandising. Entertainment merchandising is a form of marketing in which the brand or image from one product is also used to sell another. The practice of entertainment merchandising often occurs in connection with movies and television shows, especially those associated with children. For example, the success of a popular children’s television show may result in the marketing of toys that are designed to look like characters in the show. Or the situation may be reversed when a children’s television show is written to include characters that are based on already-popular toys.",
+			"author": ""
+		},
+		"audio": "/audio/part_3/entertainment_merchandising.mp3",
+		"question": "Using the examples from the lecture, explain the concept of entertainment merchandising.",
+		"voice_gender": "MALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"verbal_and_nonverbal_communication": {
+		"announcement": {
+			"title": "Verbal and Nonverbal Communication",
+			"body": "When we speak with other people face-to-face, the nonverbal signals we give—our facial expressions, hand gestures, body movements, and tone of voice—often communicate as much as, or more than, the words we utter. When our nonverbal signals, which we often produce unconsciously, agree with our verbal message, the verbal message is enhanced and supported, made more convincing. But when they conflict with the verbal message, we may be communicating an entirely different and more accurate message than what we intend.",
+			"author": ""
+		},
+		"audio": "/audio/part_3/verbal_and_nonverbal_communication.mp3",
+		"question": "Explain how the examples from the professor’s lecture illustrate the relationship between verbal and nonverbal communication.",
+		"voice_gender": "MALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"target_marketing": {
+		"announcement": {
+			"title": "Target Marketing",
+			"body": "Advertisers in the past have used radio and television in an attempt to provide information about their products to large, general audiences; it was once thought that the best way to sell a product was to advertise it to as many people as possible. However, more recent trends in advertising have turned toward target marketing. Target marketing is the strategy of advertising to smaller, very specific audiences—audiences that have been determined to have the greatest need or desire for the product being marketed. Target marketing has proved to be very effective in reaching potential customers.",
+			"author": ""
+		},
+		"audio": "/audio/part_3/target_marketing.mp3",
+		"question": "Using the professor’s examples, explain the advertising technique of target marketing.",
+		"voice_gender": "MALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"explicit_memories_and_implicit_memories": {
+		"announcement": {
+			"title": "Explicit Memories and Implicit Memories",
+			"body": "In everyday life, when people speak of memory, they are almost always speaking about what psychologists would call explicit memories. An explicit memory is a conscious or intentional recollection, usually of facts, names, events, or other things that a person can state or declare. There is another kind of memory that is not conscious. Memories of this kind are called implicit memories. An individual can have an experience that he or she cannot consciously recall yet still display reactions that indicate the experience has been somehow recorded in his or her brain.",
+			"author": ""
+		},
+		"audio": "/audio/part_3/explicit_memories_and_implicit_memories.mp3",
+		"question": "Using the example of the car advertisement, explain what is meant by implicit memory.",
+		"voice_gender": "MALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"critical_period": {
+		"announcement": {
+			"title": "Critical Period",
+			"body": "It is generally believed that for many organisms, there is a specific time period, a so-called “window of opportunity,” during which the organism must receive crucial input from its environment in order for normal development to occur. This period is called the critical period. If the needed environmental input is not received during this period, the normal development of certain physical attributes or behaviors may never occur. In other words, if the organism is not provided with the needed stimulus or influence during the critical period, it may permanently lose the capacity to ever obtain a particular physical attribute or behavior.",
+			"author": ""
+		},
+		"audio": "/audio/part_3/critical_period.mp3",
+		"question": "Using the examples of kittens and geese, explain the idea of a critical period.",
+		"voice_gender": "MALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
+	},
+	"keystone_species": {
+		"announcement": {
+			"title": "Keystone Species",
+			"body": "Within a habitat, each species depends on other species, and contributes to the overall stability of that ecosystem. However, some species do more than others by providing essential services. Without the influence of these key species, the habitat changes significantly. Scientists refer to these important players in an ecosystem as keystone species. When a keystone species disappears from its habitat, the habitat changes dramatically. Their disappearance can then trigger the loss of other species. As some species vanish, others move in or become more abundant. The new mix of species changes the habitat’s appearance and character.",
+			"author": ""
+		},
+		"audio": "/audio/part_3/keystone_species.mp3",
+		"question": "The professor gives examples of the effects of elephants on the African grasslands habitat. Using the examples from the talk, explain why elephants are considered a keystone species.",
+		"voice_gender": "MALE",
+		"key": {
+			"anouncement_key": ["1", "2", "3"],
+			"audio_key": ["1", "2", "3"]
+		}
 	}
 }
