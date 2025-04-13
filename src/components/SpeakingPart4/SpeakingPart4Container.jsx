@@ -1,6 +1,5 @@
 import SpeakingPart4Presentation from "./SpeakingPart4Presentation";
-import usePart from "../../hooks/usePart";
-import { useEffect } from "react";
+import usePart from "@/hooks/usePart";
 
 const SpeakingPart4Container = () => {
 	//The possible modes for the Speaking Part 3 component

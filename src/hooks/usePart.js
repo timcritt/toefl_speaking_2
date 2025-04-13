@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const useSpeakingPart2 = (customModeEnum, initialMode, testsURL) => {
+const usePart = (customModeEnum, initialMode, testsURL) => {
 	const [mode, _setMode] = useState(initialMode);
 	const [tests, setTests] = useState([]);
 	const [currentTest, setCurrentTest] = useState();
@@ -55,4 +55,4 @@ const useSpeakingPart2 = (customModeEnum, initialMode, testsURL) => {
 	};
 };
 
-export default useSpeakingPart2;
+export default usePart;

@@ -1,7 +1,7 @@
-import SideNavBar from "../SideNavBar/SideNavBar";
-import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
-import ListenLectureContainer from "../Listen/ListenLectureContainer";
-import PrepareSpeak from "../PrepareSpeak/PrepareSpeak";
+import SideNavBar from "@/components/SideNavBar/SideNavBar";
+import ToggleSwitch from "@/components/ToggleSwitch/ToggleSwitch";
+import ListenLectureContainer from "@/components/Listen/ListenLectureContainer";
+import PrepareSpeak from "@/components/PrepareSpeak/PrepareSpeak";
 
 const SpeakingPart4Presentation = ({
 	tests,
@@ -15,7 +15,6 @@ const SpeakingPart4Presentation = ({
 }) => {
 	return (
 		<>
-			<h1>Question 4</h1>
 			<SideNavBar tests={tests} loadTest={loadTest} currentTest={currentTest} />
 			<ToggleSwitch
 				mode={mode}

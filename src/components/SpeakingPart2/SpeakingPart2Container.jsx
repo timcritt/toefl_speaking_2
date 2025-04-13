@@ -1,5 +1,5 @@
 import SpeakingPart2Presentation from "./SpeakingPart2Presentation";
-import usePart from "../../hooks/usePart";
+import usePart from "@/hooks/usePart";
 
 const SpeakingPart2Container = () => {
 	//The possible modes for the Speaking Part 2 component

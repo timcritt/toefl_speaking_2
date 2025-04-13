@@ -1,9 +1,9 @@
-import SideNavBar from "../SideNavBar/SideNavBar";
-import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
-import Read from "../Read/Read";
-import Listen from "../Listen/ListenPresentation";
-import PrepareSpeak from "../PrepareSpeak/PrepareSpeak";
-import image from "../../assets/question_two_1.png";
+import SideNavBar from "@/components/SideNavBar/SideNavBar";
+import ToggleSwitch from "@/components/ToggleSwitch/ToggleSwitch";
+import Read from "@/components/Read/Read";
+import Listen from "@/components/Listen/ListenPresentation";
+import PrepareSpeak from "@/components/PrepareSpeak/PrepareSpeak";
+import image from "@/assets/question_two_1.png";
 
 import styles from "./SpeakingPart2.module.css";
 
@@ -17,42 +17,80 @@ const SpeakingPart2Presentation = ({
 	modeEnum,
 	time,
 }) => {
+	const renderContent = () => {
+		if (!currentTest)
+			return <h2 className={styles.no_test}>Select a question</h2>;
+
+		switch (mode) {
+			case modeEnum.READ:
+				return (
+					<>
+						<ToggleSwitch
+							mode={mode}
+							setMode={setMode}
+							modeEnum={modeEnum}
+							setTime={setTime}
+						/>
+						<Read
+							title={currentTest.announcement.title}
+							body={currentTest.announcement.body}
+							author={currentTest.announcement.author}
+						/>
+					</>
+				);
+
+			case modeEnum.LISTEN:
+				return (
+					<>
+						<ToggleSwitch
+							mode={mode}
+							setMode={setMode}
+							modeEnum={modeEnum}
+							setTime={setTime}
+						/>
+						<Listen
+							key={currentTest.audio}
+							audio={currentTest.audio}
+							image={image}
+						/>
+					</>
+				);
+
+			case modeEnum.PREPARE:
+			case modeEnum.SPEAK:
+				return (
+					<>
+						<ToggleSwitch
+							mode={mode}
+							setMode={setMode}
+							modeEnum={modeEnum}
+							setTime={setTime}
+						/>
+						<PrepareSpeak
+							question={currentTest.question}
+							mode={mode}
+							time={time}
+							modeEnum={modeEnum}
+						/>
+					</>
+				);
+
+			default:
+				return null;
+		}
+	};
+
 	return (
-		<>
-			<h1>Question 2</h1>
-			<SideNavBar tests={tests} loadTest={loadTest} currentTest={currentTest} />
-			<ToggleSwitch
-				mode={mode}
-				setMode={setMode}
-				modeEnum={modeEnum}
-				setTime={setTime}
+		<article className={styles.container}>
+			<SideNavBar
+				navTitle={"Question 2"}
+				tests={tests}
+				loadTest={loadTest}
+				currentTest={currentTest}
 			/>
 
-			{mode === modeEnum.READ && currentTest && (
-				<Read
-					title={currentTest.announcement.title}
-					body={currentTest.announcement.body}
-					author={currentTest.announcement.author}
-				/>
-			)}
-			{mode === modeEnum.LISTEN && currentTest && (
-				//Key needed here to force re-render of audio element when new test selected
-				<Listen
-					key={currentTest.audio}
-					audio={currentTest.audio}
-					image={image}
-				/>
-			)}
-			{(mode === modeEnum.PREPARE || mode === modeEnum.SPEAK) &&
-				currentTest && (
-					<PrepareSpeak
-						question={currentTest.question}
-						mode={mode}
-						time={time}
-						modeEnum={modeEnum}
-					/>
-				)}
-		</>
+			<div>{renderContent()}</div>
+		</article>
 	);
 };
 

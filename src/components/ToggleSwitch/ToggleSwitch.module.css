@@ -4,9 +4,11 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 5px;
+
 	max-width: max-content;
-	margin: auto;
+	margin: 10px auto;
+	background-color: white;
+	overflow: hidden;
 }
 
 /* Hide the default radio button */
@@ -19,24 +21,14 @@
 /* Style the radio icon */
 .toggle_group input[type="radio"] + label {
 	cursor: pointer;
-	padding: 5px 10px;
-	border-radius: 5px;
+	padding: 10px 20px;
+	background-color: #5d92c0;
+	color: white;
 	transition: all 0.3s ease;
 }
 
 /* Change the color of the label when the icon is selected */
 .toggle_group input[type="radio"]:not(:is(:checked)) + label {
+	background-color: white;
 	color: grey;
-}
-
-.toggle_group input[id="read"] + label {
-	color: #4caf50;
-}
-
-.toggle_group input[id="listen"] + label {
-	color: #2196f3;
-}
-
-.toggle_group input[id="speak"] + label {
-	color: #f44336;
 }

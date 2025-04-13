@@ -1,13 +1,14 @@
 import styles from "./Listen.module.css";
+import TestWrapper from "@/components/TestWrapper/TestWrapper";
 
 const Listen = ({ audio, image }) => {
 	return (
-		<article className={styles.announcement}>
+		<TestWrapper>
 			<img src={image} className={styles.image} />
 			<audio controls>
 				<source src={audio} type="audio/wav" />
 			</audio>
-		</article>
+		</TestWrapper>
 	);
 };
 

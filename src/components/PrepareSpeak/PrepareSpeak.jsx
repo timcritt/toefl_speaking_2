@@ -1,12 +1,13 @@
-import CountdownTimer from "../CountdownTimer/CountdownTimer";
+import CountdownTimer from "@/components/CountdownTimer/CountdownTimer";
 import styles from "./PrepareSpeak.module.css";
+import TestWrapper from "@/components/TestWrapper/TestWrapper";
 
 const PrepareSpeak = ({ question, mode, modeEnum, time }) => {
 	return (
 		<>
-			<article className={styles.announcement}>
+			<TestWrapper>
 				<p>{question}</p>
-			</article>
+			</TestWrapper>
 			<section className={styles.announcement}>
 				{mode === modeEnum.PREPARE && (
 					<span className={styles.instruction}>Prepare your response</span>
