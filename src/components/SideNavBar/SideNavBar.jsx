@@ -1,41 +1,9 @@
-import { useEffect, useState } from "react";
 import styles from "./SideNavBar.module.css";
+import SideNavBarWrapper from "./SideNavBarWrapper";
 
-const SideNavBar = ({ navTitle, tests, loadTest, currentTest }) => {
-	const [isPinned, setIsPinned] = useState(false);
-	const [isHovered, setIsHovered] = useState(false);
-
-	// 🔁 Load pin state on first render
-	useEffect(() => {
-		const stored = localStorage.getItem("sidebarPinned");
-		if (stored === "true") {
-			setIsPinned(true);
-		}
-	}, []);
-
-	// 💾 Save pin state when it changes
-	useEffect(() => {
-		localStorage.setItem("sidebarPinned", isPinned.toString());
-	}, [isPinned]);
-
-	const shouldExpand = isPinned || isHovered;
-
+const SideNavBar = ({ tests, loadTest, currentTest }) => {
 	return (
-		<nav
-			className={`${styles.expanded} ${
-				shouldExpand ? styles.expandedVisible : ""
-			}`}
-			onMouseEnter={() => !isPinned && setIsHovered(true)}
-			onMouseLeave={() => !isPinned && setIsHovered(false)}
-		>
-			<div
-				className={`${styles.pin_dot} ${
-					isPinned ? styles.pinned : styles.unpinned
-				}`}
-				onClick={() => setIsPinned(!isPinned)}
-				title={isPinned ? "Unpin sidebar" : "Pin sidebar"}
-			/>
-
+		<SideNavBarWrapper>
 			<ul className={styles.test_list}>
 				{Object.entries(tests).map(([key, value], index) => (
 					<li
@@ -52,7 +20,7 @@ const SideNavBar = ({ navTitle, tests, loadTest, currentTest }) => {
 					</li>
 				))}
 			</ul>
-		</nav>
+		</SideNavBarWrapper>
 	);
 };
 
