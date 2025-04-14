@@ -31,6 +31,7 @@ const SpeakingPart2Presentation = ({
 							setMode={setMode}
 							modeEnum={modeEnum}
 							setTime={setTime}
+							modeTimeEnum={modeTimes}
 						/>
 						<Read
 							title={currentTest.announcement.title}
@@ -48,6 +49,7 @@ const SpeakingPart2Presentation = ({
 							setMode={setMode}
 							modeEnum={modeEnum}
 							setTime={setTime}
+							modeTimeEnum={modeTimes}
 						/>
 						<Listen
 							key={currentTest.audio}
@@ -66,6 +68,7 @@ const SpeakingPart2Presentation = ({
 							setMode={setMode}
 							modeEnum={modeEnum}
 							setTime={setTime}
+							modeTimeEnum={modeTimes}
 						/>
 						<PrepareSpeak
 							question={currentTest.question}
