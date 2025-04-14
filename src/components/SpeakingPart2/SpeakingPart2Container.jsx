@@ -10,6 +10,11 @@ const SpeakingPart2Container = () => {
 		SPEAK: "SPEAK",
 	});
 
+	const modeTimes = {
+		[modeEnum.PREPARE]: 30,
+		[modeEnum.SPEAK]: 60,
+	};
+
 	//Fetch tests, handle test selection, handle switching between parts
 	const {
 		mode,
@@ -33,6 +38,7 @@ const SpeakingPart2Container = () => {
 			loadTest={loadTest}
 			time={time}
 			setTime={setTime}
+			modeTimes={modeTimes}
 		/>
 	);
 };

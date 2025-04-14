@@ -28,16 +28,16 @@ const SideNavBar = ({ navTitle, tests, loadTest, currentTest }) => {
 			onMouseEnter={() => !isPinned && setIsHovered(true)}
 			onMouseLeave={() => !isPinned && setIsHovered(false)}
 		>
-			<button
-				className={styles.pin_button}
+			<div
+				className={`${styles.pin_dot} ${
+					isPinned ? styles.pinned : styles.unpinned
+				}`}
 				onClick={() => setIsPinned(!isPinned)}
 				title={isPinned ? "Unpin sidebar" : "Pin sidebar"}
-			>
-				{isPinned ? "📌" : "📍"}
-			</button>
+			/>
 
 			<ul className={styles.test_list}>
-				{Object.entries(tests).map(([key, value]) => (
+				{Object.entries(tests).map(([key, value], index) => (
 					<li
 						key={key}
 						className={`${styles.list_item} ${
@@ -45,6 +45,7 @@ const SideNavBar = ({ navTitle, tests, loadTest, currentTest }) => {
 								? styles.active
 								: ""
 						}`}
+						style={{ animationDelay: `${index * 0.05}s` }} // Stagger delay
 						onClick={() => loadTest(value)}
 					>
 						{value.announcement.title}

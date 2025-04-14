@@ -23,7 +23,6 @@ const usePart = (customModeEnum, initialMode, testsURL) => {
 
 	const loadTest = (test) => {
 		setCurrentTest(test);
-		console.log(test);
 	};
 
 	useEffect(() => {
@@ -31,9 +30,12 @@ const usePart = (customModeEnum, initialMode, testsURL) => {
 			try {
 				const res = await fetch(testsURL);
 				if (!res.ok) throw new Error("Fetch failed");
+
 				const json = await res.json();
 				setTests(json);
-				console.log(json);
+
+				const firstTest = Object.values(json)?.[0];
+				if (firstTest) loadTest(firstTest);
 			} catch (err) {
 				console.error("Error:", err);
 			}

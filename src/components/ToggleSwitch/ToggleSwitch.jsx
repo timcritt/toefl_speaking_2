@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ToggleSwitch.module.css";
 
-const ToggleSwitch = ({ mode, modeEnum, setMode, setTime }) => {
+const ToggleSwitch = ({ mode, modeEnum, setMode, setTime, modeTimeEnum }) => {
 	return (
 		<div className={styles.toggle_group}>
 			{Object.entries(modeEnum).map(([key, value]) => {
@@ -10,9 +10,9 @@ const ToggleSwitch = ({ mode, modeEnum, setMode, setTime }) => {
 				const handleChange = () => {
 					// Set time conditionally for specific modes
 					if (value === modeEnum.PREPARE) {
-						setTime(30000);
+						setTime(modeTimeEnum.PREPARE * 1000);
 					} else if (value === modeEnum.SPEAK) {
-						setTime(60000);
+						setTime(modeTimeEnum.SPEAK * 1000);
 					}
 					setMode(value);
 				};

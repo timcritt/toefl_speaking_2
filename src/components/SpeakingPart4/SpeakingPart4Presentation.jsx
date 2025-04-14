@@ -12,6 +12,7 @@ const SpeakingPart4Presentation = ({
 	setMode,
 	modeEnum,
 	time,
+	modeTimes,
 }) => {
 	return (
 		<>
@@ -38,6 +39,7 @@ const SpeakingPart4Presentation = ({
 						mode={mode}
 						time={time}
 						modeEnum={modeEnum}
+						modeTimes={modeTimes}
 					/>
 				)}
 		</>

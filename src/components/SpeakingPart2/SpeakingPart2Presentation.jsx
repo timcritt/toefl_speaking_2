@@ -16,6 +16,7 @@ const SpeakingPart2Presentation = ({
 	setMode,
 	modeEnum,
 	time,
+	modeTimes,
 }) => {
 	const renderContent = () => {
 		if (!currentTest)
@@ -71,6 +72,7 @@ const SpeakingPart2Presentation = ({
 							mode={mode}
 							time={time}
 							modeEnum={modeEnum}
+							modeTimes={modeTimes}
 						/>
 					</>
 				);

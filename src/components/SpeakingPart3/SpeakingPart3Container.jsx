@@ -10,6 +10,11 @@ const SpeakingPart3Container = () => {
 		SPEAK: "SPEAK",
 	});
 
+	const modeTimes = {
+		[modeEnum.PREPARE]: 30,
+		[modeEnum.SPEAK]: 60,
+	};
+
 	//Speaking part 3 mode is set to READ by default
 	const {
 		mode,
@@ -33,6 +38,7 @@ const SpeakingPart3Container = () => {
 			loadTest={loadTest}
 			time={time}
 			setTime={setTime}
+			modeTimes={modeTimes}
 		/>
 	);
 };
