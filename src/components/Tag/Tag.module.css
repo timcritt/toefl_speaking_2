@@ -1,14 +1,13 @@
 .tag_item {
 	margin: 4px;
-	padding: 2px 16px;
+	padding: 7px 14px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	border-radius: 21px;
 	border: solid 2px #bbb;
 	font-family: arial;
-	font-size: 0.93rem;
+	font-size: 0.8rem;
 	font-weight: 500;
-	line-height: 30px;
 	text-align: center;
 	color: #bbbbbb;
 	background-color: #f9fafa;

@@ -1,20 +1,7 @@
 import { useEffect, useState } from "react";
-import CountdownTimer from "@/components/CountdownTimer/CountdownTimer";
-import styles from "./SpeakingPart1.module.css";
-import Tag from "@/components/Tag/Tag";
-import ToggleSwitch from "@/components/ToggleSwitch/ToggleSwitch";
-import TestWrapper from "@/components/TestWrapper/TestWrapper";
+import SpeakingPart1Presentation from "./SpeakingPart1Presentation";
 
 const SpeakingPart1Container = () => {
-	const [time, setTime] = useState(15000);
-	const [topics, setTopics] = useState([]); // List of topic names
-	const [topicData, setTopicData] = useState({}); // Full JSON object
-	const [currentTopic, setCurrentTopic] = useState("Education");
-	const [question, setQuestion] = useState("");
-
-	const prepare = () => setTime(15000);
-	const speak = () => setTime(45000);
-
 	const modeEnum = Object.freeze({
 		PREPARE: "PREPARE",
 		SPEAK: "SPEAK",
@@ -24,6 +11,12 @@ const SpeakingPart1Container = () => {
 		[modeEnum.PREPARE]: 15,
 		[modeEnum.SPEAK]: 45,
 	};
+
+	const [time, setTime] = useState(modeTimeEnum.PREPARE * 1000); // Time in milliseconds
+	const [topics, setTopics] = useState([]); // List of topic names
+	const [topicData, setTopicData] = useState({}); // Full JSON object
+	const [currentTopic, setCurrentTopic] = useState("Education");
+	const [question, setQuestion] = useState("");
 
 	const [mode, setMode] = useState(modeEnum.PREPARE);
 
@@ -73,46 +66,18 @@ const SpeakingPart1Container = () => {
 	}, []);
 
 	return (
-		<>
-			<ToggleSwitch
-				mode={mode}
-				setMode={setMode}
-				modeEnum={modeEnum}
-				setTime={setTime}
-				modeTimeEnum={modeTimeEnum}
-			/>
-			<TestWrapper>
-				{question && (
-					<div className={styles.question_container}>
-						<p className={styles.question}>{question.question}</p>
-						{question.choices && (
-							<ul className={styles.choices}>
-								{question.choices.map((choice, index) => (
-									<li key={index} className={styles.option}>
-										{choice}
-									</li>
-								))}
-							</ul>
-						)}
-					</div>
-				)}
-				<hr />
-				<p className={styles.time_instructions}>Preparation Time: 15 seconds</p>
-				<p className={styles.time_instructions}> Record Time: 45 seconds</p>
-			</TestWrapper>
-
-			<CountdownTimer time={time} />
-			<aside className={styles.tags_container}>
-				{topics.map((topic) => (
-					<Tag
-						key={topic}
-						tagName={topic}
-						handleSetTag={handleTopicChange}
-						selected={currentTopic === topic}
-					/>
-				))}
-			</aside>
-		</>
+		<SpeakingPart1Presentation
+			topics={topics}
+			question={question}
+			mode={mode}
+			setMode={setMode}
+			modeEnum={modeEnum}
+			modeTimeEnum={modeTimeEnum}
+			time={time}
+			setTime={setTime}
+			handleTopicChange={handleTopicChange}
+			currentTopic={currentTopic}
+		/>
 	);
 };
 

@@ -2,6 +2,7 @@ import CountdownTimer from "@/components/CountdownTimer/CountdownTimer";
 import styles from "./PrepareSpeak.module.css";
 import TestWrapper from "@/components/TestWrapper/TestWrapper";
 import TimeInformation from "@/components/TimeInformation/TimeInformation";
+import TimerWrapper from "../TimerWrapper/TimerWrapper";
 
 const PrepareSpeak = ({ question, mode, modeEnum, time, modeTimes }) => {
 	return (
@@ -10,17 +11,16 @@ const PrepareSpeak = ({ question, mode, modeEnum, time, modeTimes }) => {
 				<p>{question}</p>
 				<TimeInformation modeTimes={modeTimes}></TimeInformation>
 			</TestWrapper>
-			<section className={styles.announcement}>
+			<TimerWrapper>
 				{mode === modeEnum.PREPARE && (
 					<span className={styles.instruction}>Prepare your response</span>
 				)}
 				{mode === modeEnum.SPEAK && (
 					<span className={styles.instruction}>Give your response</span>
 				)}
-				<div className={styles.timer_container}>
-					<CountdownTimer time={time} />
-				</div>
-			</section>
+
+				<CountdownTimer time={time} />
+			</TimerWrapper>
 		</>
 	);
 };
