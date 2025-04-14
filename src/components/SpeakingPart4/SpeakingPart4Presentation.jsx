@@ -22,6 +22,7 @@ const SpeakingPart4Presentation = ({
 				setMode={setMode}
 				modeEnum={modeEnum}
 				setTime={setTime}
+				modeTimeEnum={modeTimes}
 			/>
 
 			{mode === modeEnum.LISTEN && currentTest && (
