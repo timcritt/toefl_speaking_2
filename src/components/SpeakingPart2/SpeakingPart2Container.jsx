@@ -1,5 +1,5 @@
 import SpeakingPart2Presentation from "./SpeakingPart2Presentation";
-import usePart from "../../hooks/usePart";
+import usePart from "@/hooks/usePart";
 
 const SpeakingPart2Container = () => {
 	//The possible modes for the Speaking Part 2 component
@@ -9,6 +9,11 @@ const SpeakingPart2Container = () => {
 		PREPARE: "PREPARE",
 		SPEAK: "SPEAK",
 	});
+
+	const modeTimes = {
+		[modeEnum.PREPARE]: 30,
+		[modeEnum.SPEAK]: 60,
+	};
 
 	//Fetch tests, handle test selection, handle switching between parts
 	const {
@@ -33,6 +38,7 @@ const SpeakingPart2Container = () => {
 			loadTest={loadTest}
 			time={time}
 			setTime={setTime}
+			modeTimes={modeTimes}
 		/>
 	);
 };

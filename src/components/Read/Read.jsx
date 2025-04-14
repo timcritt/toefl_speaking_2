@@ -1,10 +1,11 @@
 import styles from "./Read.module.css";
-import CountdownTimer from "../CountdownTimer/CountdownTimer";
+import CountdownTimer from "@/components/CountdownTimer/CountdownTimer";
+import TestWrapper from "@/components/TestWrapper/TestWrapper";
 
 const Read = ({ title, body, author }) => {
 	return (
 		<>
-			<article className={styles.announcement}>
+			<TestWrapper>
 				<h2>{title}</h2>
 				<p>{body}</p>
 				{author && (
@@ -13,7 +14,7 @@ const Read = ({ title, body, author }) => {
 						<p>{author}</p>
 					</>
 				)}
-			</article>
+			</TestWrapper>
 
 			<article className={styles.announcement}>
 				<div className={styles.timer_container}>

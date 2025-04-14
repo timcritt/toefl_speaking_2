@@ -1,6 +1,5 @@
 import SpeakingPart4Presentation from "./SpeakingPart4Presentation";
-import usePart from "../../hooks/usePart";
-import { useEffect } from "react";
+import usePart from "@/hooks/usePart";
 
 const SpeakingPart4Container = () => {
 	//The possible modes for the Speaking Part 3 component
@@ -9,6 +8,10 @@ const SpeakingPart4Container = () => {
 		PREPARE: "PREPARE",
 		SPEAK: "SPEAK",
 	});
+	const modeTimes = {
+		[modeEnum.PREPARE]: 30,
+		[modeEnum.SPEAK]: 60,
+	};
 
 	//Speaking part 3 mode is set to READ by default
 	const {
@@ -33,6 +36,7 @@ const SpeakingPart4Container = () => {
 			loadTest={loadTest}
 			time={time}
 			setTime={setTime}
+			modeTimes={modeTimes}
 		/>
 	);
 };

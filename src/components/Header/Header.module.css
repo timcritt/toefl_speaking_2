@@ -1,7 +1,20 @@
 .header {
-	background-color: lightgray;
-	padding: 5px;
-	text-align: center;
+	display: flex;
+	justify-content: center; /* center title */
+	align-items: center;
+	height: 60px;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+	background-color: white;
+}
+
+.header nav {
+	position: absolute;
+	left: 20px;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	font-size: 1.2rem;
 }
 
 .header nav ul {
@@ -15,4 +28,49 @@
 	list-style: none;
 	margin: 0 25px;
 	padding: 5px;
+}
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+}
+
+.title {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.toggle_group {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+
+	overflow: hidden;
+	background-color: white;
+	gap: 0; /* removes spacing between items */
+}
+
+.toggle_group_label {
+	margin-right: 20px;
+}
+
+.activeLink {
+	background-color: #5d92c0;
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.inactiveLink {
+	background-color: white;
+	color: grey;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }

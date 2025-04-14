@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const useSpeakingPart2 = (customModeEnum, initialMode, testsURL) => {
+const usePart = (customModeEnum, initialMode, testsURL) => {
 	const [mode, _setMode] = useState(initialMode);
 	const [tests, setTests] = useState([]);
 	const [currentTest, setCurrentTest] = useState();
@@ -23,7 +23,6 @@ const useSpeakingPart2 = (customModeEnum, initialMode, testsURL) => {
 
 	const loadTest = (test) => {
 		setCurrentTest(test);
-		console.log(test);
 	};
 
 	useEffect(() => {
@@ -31,9 +30,12 @@ const useSpeakingPart2 = (customModeEnum, initialMode, testsURL) => {
 			try {
 				const res = await fetch(testsURL);
 				if (!res.ok) throw new Error("Fetch failed");
+
 				const json = await res.json();
 				setTests(json);
-				console.log(json);
+
+				const firstTest = Object.values(json)?.[0];
+				if (firstTest) loadTest(firstTest);
 			} catch (err) {
 				console.error("Error:", err);
 			}
@@ -55,4 +57,4 @@ const useSpeakingPart2 = (customModeEnum, initialMode, testsURL) => {
 	};
 };
 
-export default useSpeakingPart2;
+export default usePart;

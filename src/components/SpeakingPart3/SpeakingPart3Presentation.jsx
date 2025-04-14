@@ -1,9 +1,9 @@
-import SideNavBar from "../SideNavBar/SideNavBar";
-import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
-import Read from "../Read/Read";
-import Part3ListenContainer from "../Listen/ListenLectureContainer";
-import PrepareSpeak from "../PrepareSpeak/PrepareSpeak";
-import image from "../../assets/male_professor.png";
+import SideNavBar from "@/components/SideNavBar/SideNavBar";
+import ToggleSwitch from "@/components/ToggleSwitch/ToggleSwitch";
+import Read from "@/components/Read/Read";
+import Part3ListenContainer from "@/components/Listen/ListenLectureContainer";
+import PrepareSpeak from "@/components/PrepareSpeak/PrepareSpeak";
+import image from "@/assets/male_professor.png";
 
 const SpeakingPart3Presentation = ({
 	tests,
@@ -14,10 +14,10 @@ const SpeakingPart3Presentation = ({
 	setMode,
 	modeEnum,
 	time,
+	modeTimes,
 }) => {
 	return (
 		<>
-			<h1>Question 3</h1>
 			<SideNavBar tests={tests} loadTest={loadTest} currentTest={currentTest} />
 			<ToggleSwitch
 				mode={mode}
@@ -49,6 +49,7 @@ const SpeakingPart3Presentation = ({
 						mode={mode}
 						time={time}
 						modeEnum={modeEnum}
+						modeTimes={modeTimes}
 					/>
 				)}
 		</>

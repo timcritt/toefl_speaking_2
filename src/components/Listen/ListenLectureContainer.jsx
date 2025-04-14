@@ -5,10 +5,6 @@ import femaleProfessor from "@/assets/female_professor.png";
 const ListenLectureContainer = ({ audio, voiceGender }) => {
 	const image = voiceGender === "MALE" ? maleProfessor : femaleProfessor;
 
-	return (
-		<article>
-			<ListenPresentation audio={audio} image={image} />
-		</article>
-	);
+	return <ListenPresentation audio={audio} image={image} />;
 };
 export default ListenLectureContainer;
