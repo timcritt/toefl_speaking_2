@@ -1,11 +1,11 @@
 import SideNavBarWrapper from "@/components/SideNavBar/SideNavBarWrapper";
 import ToggleSwitch from "@/components/ToggleSwitch/ToggleSwitch";
 import TestWrapper from "@/components/TestWrapper/TestWrapper";
-import CountdownTimer from "@/components/CountdownTimer/CountdownTimer";
 import TimeInformation from "@/components/TimeInformation/TimeInformation";
 import Tag from "@/components/Tag/Tag";
 import styles from "./SpeakingPart1.module.css";
-import TimerWrapper from "../TimerWrapper/TimerWrapper";
+import TimerWrapper from "@/components/TimerWrapper/TimerWrapper";
+import CountdownContainer from "@/components/CountdownTimer/CountdownContainer";
 
 const SpeakingPart1Presentation = ({
 	topics,
@@ -60,7 +60,7 @@ const SpeakingPart1Presentation = ({
 				<TimeInformation modeTimes={modeTimeEnum} />
 			</TestWrapper>
 			<TimerWrapper>
-				<CountdownTimer time={time} />
+				<CountdownContainer initialTime={time} />
 			</TimerWrapper>
 		</>
 	);

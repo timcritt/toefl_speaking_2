@@ -1,4 +1,4 @@
-import CountdownTimer from "@/components/CountdownTimer/CountdownTimer";
+import CountdownContainer from "@/components/CountdownTimer/CountdownContainer";
 import styles from "./PrepareSpeak.module.css";
 import TestWrapper from "@/components/TestWrapper/TestWrapper";
 import TimeInformation from "@/components/TimeInformation/TimeInformation";
@@ -19,7 +19,7 @@ const PrepareSpeak = ({ question, mode, modeEnum, time, modeTimes }) => {
 					<span className={styles.instruction}>Give your response</span>
 				)}
 
-				<CountdownTimer time={time} />
+				<CountdownContainer initialTime={time} />
 			</TimerWrapper>
 		</>
 	);
