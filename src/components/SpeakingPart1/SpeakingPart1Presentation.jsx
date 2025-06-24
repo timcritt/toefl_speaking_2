@@ -5,7 +5,7 @@ import CountdownTimer from "@/components/CountdownTimer/CountdownTimer";
 import TimeInformation from "@/components/TimeInformation/TimeInformation";
 import Tag from "@/components/Tag/Tag";
 import styles from "./SpeakingPart1.module.css";
-import TimerWrapper from "../TimerWrapper/TimerWrapper";
+import TimerWrapper from "@/components/TimerWrapper/TimerWrapper";
 
 const SpeakingPart1Presentation = ({
 	topics,
