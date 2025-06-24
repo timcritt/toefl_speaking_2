@@ -1,3 +1,10 @@
+@font-face {
+	font-family: "Digital-7";
+	src: url("/fonts/digital-7.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
 .container {
 	color: #9d9c9c;
 	text-align: center;
@@ -16,21 +23,5 @@
 	justify-content: center;
 	font-family: "Digital-7", sans-serif;
 	font-size: 1.7rem;
-}
-
-/*media query for mobile devices*/
-@media (max-width: 768px) {
-	.timer_bar_container {
-		padding: 10px 20px;
-	}
-	.timer_bar {
-		height: 8px;
-	}
-	.time_display {
-		font-size: 1.5rem;
-	}
-}
-
-:fullscreen .time_display {
-	font-size: 3rem;
+	font-weight: normal;
 }

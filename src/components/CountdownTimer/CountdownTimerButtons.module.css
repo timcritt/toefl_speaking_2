@@ -1,0 +1,62 @@
+.button_container {
+	margin-top: 20px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+}
+
+.btn {
+	font-size: small;
+	padding: 0.2rem 0.2rem 0rem 0.2rem;
+	width: 4rem;
+	margin: 2px;
+	color: #dbdbdb;
+	cursor: pointer;
+	border: solid #dbdbdb 2px;
+	background-color: transparent;
+	transition: all 0.25s ease-out;
+}
+
+.btn:hover {
+	color: grey;
+	border-color: grey;
+}
+
+.start:hover {
+	color: green;
+}
+
+.start:focus {
+	outline: none;
+}
+
+.stop:hover {
+	color: #c82333;
+}
+
+.stop:focus {
+	outline: none;
+}
+
+.stop:disabled {
+	color: #dbdbdb;
+	cursor: default;
+}
+
+.stop:disabled:hover {
+	color: #dbdbdb;
+	border-color: #dbdbdb;
+	cursor: default;
+}
+
+.reset {
+	cursor: pointer;
+}
+
+.reset:hover {
+	color: blue;
+}
+
+.reset:focus {
+	outline: none;
+}

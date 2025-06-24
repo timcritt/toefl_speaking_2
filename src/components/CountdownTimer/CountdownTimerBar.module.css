@@ -1,0 +1,22 @@
+.timer_bar_container {
+	background-color: lightgray;
+	padding: 10px 20px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.timer_bar_outer {
+	background-color: black;
+	/* border-radius: 5px; */
+	border: 2px solid black;
+	max-width: 100%;
+	display: flex;
+	justify-content: end;
+}
+
+.timer_bar {
+	height: 15px;
+	background-color: white;
+	/* border-radius: 5px; */
+	transition: width 0.1s linear;
+}

@@ -1,5 +1,5 @@
 import styles from "./Read.module.css";
-import CountdownTimer from "@/components/CountdownTimer/CountdownTimer";
+import CountdownContainer from "@/components/CountdownTimer/CountdownContainer";
 import TestWrapper from "@/components/TestWrapper/TestWrapper";
 import TimerWrapper from "../TimerWrapper/TimerWrapper";
 
@@ -18,7 +18,7 @@ const Read = ({ title, body, author }) => {
 			</TestWrapper>
 
 			<TimerWrapper>
-				<CountdownTimer time={45000} />
+				<CountdownContainer initialTime={45000} />
 			</TimerWrapper>
 		</>
 	);
