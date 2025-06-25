@@ -34,9 +34,9 @@ const SpeakingPart2Presentation = ({
 							modeTimeEnum={modeTimes}
 						/>
 						<Read
-							title={currentTest.announcement.title}
-							body={currentTest.announcement.body}
-							author={currentTest.announcement.author}
+							title={currentTest.reading_title}
+							body={currentTest.reading_body}
+							author={currentTest.author}
 						/>
 					</>
 				);
@@ -52,8 +52,8 @@ const SpeakingPart2Presentation = ({
 							modeTimeEnum={modeTimes}
 						/>
 						<Listen
-							key={currentTest.audio}
-							audio={currentTest.audio}
+							key={currentTest.listening_audio}
+							audio={currentTest.listening_audio}
 							image={image}
 						/>
 					</>
@@ -71,7 +71,7 @@ const SpeakingPart2Presentation = ({
 							modeTimeEnum={modeTimes}
 						/>
 						<PrepareSpeak
-							question={currentTest.question}
+							question={currentTest.question_text}
 							mode={mode}
 							time={time}
 							modeEnum={modeEnum}

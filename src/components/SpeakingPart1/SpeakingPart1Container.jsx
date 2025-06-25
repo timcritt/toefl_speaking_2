@@ -22,7 +22,7 @@ const SpeakingPart1Container = () => {
 
 	const getTopics = async () => {
 		try {
-			const response = await fetch("/questions_part_1.json");
+			const response = await fetch("/questions_part_1_and_officials.json");
 			if (!response.ok)
 				throw new Error(`HTTP error! status: ${response.status}`);
 

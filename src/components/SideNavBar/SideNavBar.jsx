@@ -9,14 +9,12 @@ const SideNavBar = ({ tests, loadTest, currentTest }) => {
 					<li
 						key={key}
 						className={`${styles.list_item} ${
-							value.announcement.title === currentTest?.announcement.title
-								? styles.active
-								: ""
+							value.title === currentTest?.title ? styles.active : ""
 						}`}
 						style={{ animationDelay: `${index * 0.05}s` }} // Stagger delay
 						onClick={() => loadTest(value)}
 					>
-						{value.announcement.title}
+						{value.title}
 					</li>
 				))}
 			</ul>

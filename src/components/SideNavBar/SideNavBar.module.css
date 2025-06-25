@@ -17,6 +17,7 @@
 /* When pinned or hovered */
 .expandedVisible {
 	transform: translateX(0);
+	overflow-y: scroll;
 }
 
 /* === Hamburger-style Edge Icon === */

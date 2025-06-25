@@ -25,7 +25,7 @@ const SpeakingPart2Container = () => {
 		loadTest,
 		time,
 		setTime,
-	} = usePart(modeEnum, modeEnum.READ, "./speaking_part_2.json");
+	} = usePart(modeEnum, modeEnum.READ, "./questions_part_2_and_officials.json");
 
 	return (
 		<SpeakingPart2Presentation
