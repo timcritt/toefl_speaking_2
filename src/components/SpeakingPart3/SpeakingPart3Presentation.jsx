@@ -46,6 +46,7 @@ const SpeakingPart3Presentation = ({
 			{(mode === modeEnum.PREPARE || mode === modeEnum.SPEAK) &&
 				currentTest && (
 					<PrepareSpeak
+						question_audio={currentTest.question_audio}
 						question={currentTest.question_text}
 						mode={mode}
 						time={time}

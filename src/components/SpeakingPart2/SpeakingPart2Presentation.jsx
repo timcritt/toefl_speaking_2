@@ -71,6 +71,7 @@ const SpeakingPart2Presentation = ({
 							modeTimeEnum={modeTimes}
 						/>
 						<PrepareSpeak
+							question_audio={currentTest.question_audio}
 							question={currentTest.question_text}
 							mode={mode}
 							time={time}
