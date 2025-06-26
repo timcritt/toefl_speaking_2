@@ -4,7 +4,7 @@ import styles from "./QuestionToggleSwitch.module.css";
 const QuestionToggleSwitch = () => {
 	return (
 		<nav className={styles.container}>
-			<span className={styles.toggle_group_label}>Question:</span>
+			<span className={styles.toggle_group_label}>Task:</span>
 			<div className={styles.toggle_group}>
 				<NavLink
 					to="/part_1"

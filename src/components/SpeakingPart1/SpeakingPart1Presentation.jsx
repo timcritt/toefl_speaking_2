@@ -6,6 +6,7 @@ import Tag from "@/components/Tag/Tag";
 import styles from "./SpeakingPart1.module.css";
 import TimerWrapper from "@/components/TimerWrapper/TimerWrapper";
 import CountdownContainer from "@/components/CountdownTimer/CountdownContainer";
+import PrepareSpeak from "../PrepareSpeak/PrepareSpeak";
 
 const SpeakingPart1Presentation = ({
 	topics,
@@ -41,6 +42,16 @@ const SpeakingPart1Presentation = ({
 				setTime={setTime}
 				modeTimeEnum={modeTimeEnum}
 			/>
+			{/* Can't use the prepare speak in its current form as questions for part 1 are sometimes rendered with choices */}
+			{/* <PrepareSpeak
+				question={question.question}
+				question_audio={null}
+				mode={mode}
+				setMode={setMode}
+				modeEnum={modeEnum}
+				time={time}
+				modeTimes={modeTimeEnum}
+			></PrepareSpeak> */}
 			<TestWrapper>
 				{question && (
 					<div>
