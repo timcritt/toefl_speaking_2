@@ -20,3 +20,7 @@
 	/* border-radius: 5px; */
 	transition: width 0.1s linear;
 }
+
+.no_transition {
+	transition: none !important;
+}

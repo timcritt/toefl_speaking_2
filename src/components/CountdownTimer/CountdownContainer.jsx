@@ -7,10 +7,12 @@ import styles from "./CountdownContainer.module.css";
 
 const CountdownContainer = ({ initialTime }) => {
 	const timerRef = useRef(null);
+
 	const [currentTime, setCurrentTime] = useState(initialTime);
+	const [totalTime, setTotalTime] = useState(initialTime);
 	const [ticking, setTicking] = useState(false);
 
-	// Poll timer state so UI stays in sync
+	// Poll the timer for state updates
 	useEffect(() => {
 		const interval = setInterval(() => {
 			if (timerRef.current) {
@@ -21,11 +23,26 @@ const CountdownContainer = ({ initialTime }) => {
 		return () => clearInterval(interval);
 	}, []);
 
+	// Reset timer if initialTime changes
+	useEffect(() => {
+		if (timerRef.current) {
+			timerRef.current.setTime(initialTime);
+			setCurrentTime(initialTime);
+			setTotalTime(initialTime);
+		}
+	}, [initialTime]);
+
 	const formatTime = (ms) => {
 		const totalSeconds = Math.round(ms / 1000);
 		const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, "0");
 		const seconds = String(totalSeconds % 60).padStart(2, "0");
 		return `${minutes}:${seconds}`;
+	};
+
+	const handleReset = () => {
+		timerRef.current.reset();
+		setCurrentTime(timerRef.current.getInitialTime());
+		setTotalTime(timerRef.current.getInitialTime());
 	};
 
 	return (
@@ -34,23 +51,20 @@ const CountdownContainer = ({ initialTime }) => {
 				{currentTime > 0 ? formatTime(currentTime) : "Time Up!"}
 			</h2>
 
-			{/* Timer logic only */}
-			<CountdownTimer ref={timerRef} time={initialTime} />
+			<CountdownTimer ref={timerRef} time={totalTime} />
 
-			{/* Progress bar */}
-			<CountdownTimerBar currentTime={currentTime} totalTime={initialTime} />
+			<CountdownTimerBar
+				currentTime={currentTime} // ✅ elapsed time
+				totalTime={totalTime}
+			/>
 
-			{/* Control buttons */}
 			<CountdownTimerButtons
 				ticking={ticking}
 				onStartStop={() => {
-					if (ticking) {
-						timerRef.current.stop();
-					} else {
-						timerRef.current.start();
-					}
+					if (ticking) timerRef.current.stop();
+					else timerRef.current.start();
 				}}
-				onReset={() => timerRef.current.reset()}
+				onReset={handleReset}
 				disabled={currentTime === 0}
 			/>
 		</div>

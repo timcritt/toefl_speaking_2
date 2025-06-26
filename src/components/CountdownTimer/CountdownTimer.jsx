@@ -1,64 +1,65 @@
 import React, {
-	useState,
+	useImperativeHandle,
+	forwardRef,
 	useRef,
 	useEffect,
-	forwardRef,
-	useImperativeHandle,
 } from "react";
 
 const CountdownTimer = forwardRef(({ time }, ref) => {
-	const [currentTime, setCurrentTime] = useState(time);
-	const [ticking, setTicking] = useState(false);
 	const intervalRef = useRef(null);
+	const initialTimeRef = useRef(time);
+	const currentTimeRef = useRef(time);
+	const tickingRef = useRef(false);
 
-	// Reset on time prop change
-	useEffect(() => {
-		reset();
-	}, [time]);
-
-	// Expose controls to parent
 	useImperativeHandle(ref, () => ({
-		start,
-		stop,
-		reset,
-		getTicking: () => ticking,
-		getCurrentTime: () => currentTime,
+		start() {
+			if (tickingRef.current) return;
+			tickingRef.current = true;
+			intervalRef.current = setInterval(() => {
+				currentTimeRef.current = Math.max(0, currentTimeRef.current - 100);
+				if (currentTimeRef.current === 0) {
+					clearInterval(intervalRef.current);
+					tickingRef.current = false;
+				}
+			}, 100);
+		},
+
+		stop() {
+			clearInterval(intervalRef.current);
+			intervalRef.current = null;
+			tickingRef.current = false;
+		},
+
+		reset() {
+			this.stop();
+			currentTimeRef.current = initialTimeRef.current;
+		},
+
+		setTime(newTime) {
+			this.stop();
+			initialTimeRef.current = newTime;
+			currentTimeRef.current = newTime;
+		},
+
+		getCurrentTime() {
+			return currentTimeRef.current;
+		},
+
+		getTicking() {
+			return tickingRef.current;
+		},
+
+		getInitialTime() {
+			return initialTimeRef.current;
+		},
 	}));
 
-	function start() {
-		if (currentTime > 0 && !ticking) {
-			setTicking(true);
-		}
-	}
-
-	function stop() {
-		setTicking(false);
-	}
-
-	function reset() {
-		setTicking(false);
-		setCurrentTime(time);
-		clearInterval(intervalRef.current);
-	}
-
 	useEffect(() => {
-		if (ticking) {
-			intervalRef.current = setInterval(() => {
-				setCurrentTime((prev) => {
-					if (prev <= 100) {
-						stop();
-						return 0;
-					}
-					return prev - 100;
-				});
-			}, 100);
-		} else {
-			clearInterval(intervalRef.current);
-		}
-		return () => clearInterval(intervalRef.current);
-	}, [ticking]);
+		initialTimeRef.current = time;
+		currentTimeRef.current = time;
+	}, [time]);
 
-	return null; // This component has no UI — it's just logic.
+	return null;
 });
 
 export default CountdownTimer;
