@@ -6,7 +6,7 @@ import Tag from "@/components/Tag/Tag";
 import styles from "./SpeakingPart1.module.css";
 import TimerWrapper from "@/components/TimerWrapper/TimerWrapper";
 import CountdownContainer from "@/components/CountdownTimer/CountdownContainer";
-import PrepareSpeak from "../PrepareSpeak/PrepareSpeak";
+import PrepareSpeak from "../../components/PrepareSpeak/PrepareSpeak";
 
 const SpeakingPart1Presentation = ({
 	topics,
