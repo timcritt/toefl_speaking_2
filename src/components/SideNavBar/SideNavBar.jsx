@@ -2,6 +2,15 @@ import styles from "./SideNavBar.module.css";
 import SideNavBarWrapper from "./SideNavBarWrapper";
 
 const SideNavBar = ({ tests, loadTest, currentTest }) => {
+	const handleTestClick = (testId) => {
+		if (testId) {
+			console.log("Loading test:", testId);
+			loadTest(testId);
+		} else {
+			console.warn("Tried to load an invalid test:", testId);
+		}
+	};
+
 	return (
 		<SideNavBarWrapper>
 			<ul className={styles.test_list}>
@@ -12,7 +21,7 @@ const SideNavBar = ({ tests, loadTest, currentTest }) => {
 							value.title === currentTest?.title ? styles.active : ""
 						}`}
 						style={{ animationDelay: `${index * 0.05}s` }} // Stagger delay
-						onClick={() => loadTest(value)}
+						onClick={() => handleTestClick(value.id)}
 					>
 						{value.title}
 					</li>

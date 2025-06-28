@@ -1,6 +1,6 @@
 // src/store/authSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { loginRequest } from "@/api/auth";
+import { loginRequest } from "@/api/auth/authAPI";
 import { setAuthHeaders } from "@/api/httpClient";
 
 const initialToken = localStorage.getItem("token");

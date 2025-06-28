@@ -1,5 +1,7 @@
 import SpeakingPart2Presentation from "./SpeakingPart2Presentation";
 import usePart from "@/hooks/usePart";
+import { getSpeakingTaskTwoSummaries } from "../../api/tasks/tasksAPI";
+import { getSpeakingTaskTwoById } from "../../api/tasks/tasksAPI";
 
 const SpeakingPart2Container = () => {
 	//The possible modes for the Speaking Part 2 component
@@ -25,7 +27,12 @@ const SpeakingPart2Container = () => {
 		loadTest,
 		time,
 		setTime,
-	} = usePart(modeEnum, modeEnum.READ, "./questions_part_2_and_officials.json");
+	} = usePart(
+		modeEnum,
+		modeEnum.READ,
+		getSpeakingTaskTwoSummaries,
+		getSpeakingTaskTwoById
+	);
 
 	return (
 		<SpeakingPart2Presentation
