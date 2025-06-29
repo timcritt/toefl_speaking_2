@@ -28,16 +28,16 @@ const SpeakingPart4Presentation = ({
 			{mode === modeEnum.LISTEN && currentTest && (
 				//Key needed here to force re-render of audio element when new test selected
 				<ListenLectureContainer
-					key={currentTest.listening_audio}
-					audio={currentTest.listening_audio}
-					voiceGender={currentTest.voice_gender}
+					key={currentTest.listeningAudio}
+					audio={currentTest.listeningAudio}
+					voiceGender={currentTest.voiceGender}
 				/>
 			)}
 			{(mode === modeEnum.PREPARE || mode === modeEnum.SPEAK) &&
 				currentTest && (
 					<PrepareSpeak
-						question_audio={currentTest.question_audio}
-						question={currentTest.question_text}
+						question_audio={currentTest.questionAudio}
+						question={currentTest.questionText}
 						mode={mode}
 						time={time}
 						modeEnum={modeEnum}

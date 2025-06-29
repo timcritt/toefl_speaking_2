@@ -34,11 +34,15 @@ const usePart = (customModeEnum, initialMode, fetchAllTasks, fetchTaskById) => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const data = await fetchAllTasks(); // already the raw data
-				console.log("Fetched tests:", data);
-				setTests(data);
+				const data = await fetchAllTasks(); // Already raw data
 
-				const firstTest = data?.[0];
+				// Sort by id (assuming id is a string — adjust if it's numeric)
+				const sorted = [...data].sort((a, b) => Number(a.id) - Number(b.id));
+
+				console.log("Sorted tests:", sorted);
+				setTests(sorted);
+
+				const firstTest = sorted?.[0];
 				console.log("First test:", firstTest.id);
 				if (firstTest) loadTest(firstTest.id);
 			} catch (err) {

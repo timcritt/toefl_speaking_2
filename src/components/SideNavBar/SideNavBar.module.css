@@ -88,8 +88,7 @@
 /* === Test List Items === */
 .list_item {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: column;
 	padding: 10px 20px;
 	margin: 5px 0;
 	background-color: white;
@@ -99,14 +98,32 @@
 	cursor: pointer;
 }
 
+.reading_title {
+	font-size: 14px;
+	color: #666;
+	margin-top: 5px;
+}
+
+.test_title {
+	font-size: 16px;
+	color: #565656;
+	font-weight: bold;
+}
+
+/* Hover effect for unselected list items */
 .list_item:not(.active):hover {
 	background-color: #f0f0f0;
 	color: black;
 }
 
+/* Highlighted task background */
 .active {
-	color: white;
 	background-color: #5d92c0;
+}
+
+/* Highlighted task text is white */
+.active > span {
+	color: white;
 }
 
 /* === Animation: Fade + Slide In === */

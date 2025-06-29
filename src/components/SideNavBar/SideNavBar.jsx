@@ -23,7 +23,12 @@ const SideNavBar = ({ tests, loadTest, currentTest }) => {
 						style={{ animationDelay: `${index * 0.05}s` }} // Stagger delay
 						onClick={() => handleTestClick(value.id)}
 					>
-						{value.title}
+						{value.title && (
+							<span className={styles.test_title}>{value.title}</span>
+						)}
+						{value.readingTitle && (
+							<span className={styles.reading_title}>{value.readingTitle}</span>
+						)}
 					</li>
 				))}
 			</ul>
